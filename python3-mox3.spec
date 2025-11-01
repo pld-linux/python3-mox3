@@ -5,7 +5,7 @@
 
 Summary:	Mock object framework for Python 3
 Summary(pl.UTF-8):	Szkielet obiektów atrap dla Pythona 3
-Name:		python-mox3
+Name:		python3-mox3
 Version:	1.1.0
 Release:	1
 License:	Apache v2.0
