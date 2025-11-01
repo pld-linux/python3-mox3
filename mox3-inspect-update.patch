@@ -1,0 +1,15 @@
+--- mox3-1.1.0/mox3/mox.py.orig	2020-06-04 12:40:20.000000000 +0200
++++ mox3-1.1.0/mox3/mox.py	2025-11-01 21:36:31.945334971 +0100
+@@ -906,7 +906,11 @@ class MethodSignatureChecker(object):
+                         can't be inspected.
+         """
+         try:
+-            self._args, varargs, varkw, defaults = inspect.getargspec(method)
++            ret = inspect.getfullargspec(method)
++            self._args = ret.args
++            varargs = ret.varargs
++            varkw = ret.varkw
++            defaults = ret.defaults
+         except TypeError:
+             raise ValueError('Could not get argument specification for %r'
+                              % (method,))
